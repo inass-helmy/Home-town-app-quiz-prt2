@@ -447,3 +447,13 @@ footer a {
     order: 5;
   }
 }
+@media screen and (max-width: 525px) {
+.header__inner {
+  font-size: 0.7em;
+}
+  .header__logo {
+    size: 70%;
+    margin-left:2%;
+    margin-bottom: 3%;
+}
+}
