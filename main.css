@@ -381,6 +381,8 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
   .hero {
@@ -407,17 +409,8 @@ footer a {
     width: 100;
     order: 5;
   }
-  nav {
-    position: relative;
-    transform: translate(0,0);
-  }
-  body {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  main {
-    width: auto;
-    flex-grow: 1;
+  #nav_menu {
+    display: none;
   }
 }
 
@@ -459,17 +452,19 @@ footer a {
     order: 5;
   }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 599px) {
 .header__inner {
   font-size: 0.7em;
 }
   .header__logo {
-    size: 70%;
+    max-height: 50px;
+    max-width: 50px;
     margin-left:2%;
     margin-bottom: 3%;
 }
-nav {
-  width: 300px;
+
+.nav {
+  width: 50%;
   position: absolute;
   /* This trasform moves the drawer off canvas. */
   -webkit-transform: translate(-300px, 0);
@@ -477,11 +472,54 @@ nav {
   /* Optionally, we animate the drawer. */
   transition: transform 0.3s ease;
 }
-nav.open {
+.nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+    background-color: #E0E0E0;
+
+  }
+  .hero {
+    z-index: -1;
+  }
+ nav.open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+
 #nav_menu {
-  size: 200%;
+  min-width: 20px;
+  min-height: 25px;
+  position: relative;
+}
+
+}
+
+@media screen and (min-width: 450px) {
+  .header__logo {
+    max-height: 60px;
+    max-width: 60px;
+  
+  }
+  .header__inner {
+    font-size: .75em;
+  }
+  #nav_menu {
+  min-width: 28px;
+  min-height: 32px;
+  margin-left: 1%;
 }
 }
+@media screen and (min-width: 450px) and (max-width: 598){
+  .header__inner {
+    font-size: .9em;
+    }
+  #nav_menu {
+  min-width: 35px;
+  min-height: 40px;
+
+}
+}
+
+
